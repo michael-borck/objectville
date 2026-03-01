@@ -1,5 +1,9 @@
 # objectville
 
+<!-- BADGES:START -->
+[![educational](https://img.shields.io/badge/-educational-blue?style=flat-square)](https://github.com/topics/educational) [![learning-resources](https://img.shields.io/badge/-learning--resources-blue?style=flat-square)](https://github.com/topics/learning-resources) [![object-oriented-programming](https://img.shields.io/badge/-object--oriented--programming-blue?style=flat-square)](https://github.com/topics/object-oriented-programming) [![python](https://img.shields.io/badge/-python-3776ab?style=flat-square)](https://github.com/topics/python) [![tutorial](https://img.shields.io/badge/-tutorial-blue?style=flat-square)](https://github.com/topics/tutorial) [![curtin](https://img.shields.io/badge/-curtin-f57c00?style=flat-square)](https://github.com/topics/curtin) [![edtech](https://img.shields.io/badge/-edtech-4caf50?style=flat-square)](https://github.com/topics/edtech) [![education](https://img.shields.io/badge/-education-blue?style=flat-square)](https://github.com/topics/education) [![exercises](https://img.shields.io/badge/-exercises-blue?style=flat-square)](https://github.com/topics/exercises) [![interactive-learning](https://img.shields.io/badge/-interactive--learning-blue?style=flat-square)](https://github.com/topics/interactive-learning)
+<!-- BADGES:END -->
+
 An interactive Python tutorial designed to teach object-oriented programming concepts through hands-on exercises and practical examples. This educational project uses a subway system simulation to demonstrate key OOP principles including classes, objects, inheritance, and encapsulation.
 
 ## Description
