@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objectville</title>
+  <meta name="description" content="Object-oriented Python through a subway system: stations, connections, and the classes that model them. Clone it, run it, extend it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #e8e6e3; --gray-1: #9a9a9e; --gray-2: #5e5e63; --gray-3: #2a2a30;
+      --gray-4: #1e1e23; --gray-5: #16161a; --black: #0a0a0b;
+      --accent: #22c55e; --font: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace; --radius: 12px;
+    }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar { display: flex; align-items: center; gap: 1rem; padding: 0 1.5rem; height: 48px; border-bottom: 1px solid var(--gray-3); position: sticky; top: 0; z-index: 10; background: var(--black); }
+    .topbar-logo { font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700; color: var(--white); white-space: nowrap; }
+    .topbar-logo .dot { color: var(--gray-2); }
+    .topbar-logo .tld { color: var(--accent); }
+    .topbar-spacer { flex: 1; }
+    .topbar-links { display: flex; gap: 1.25rem; }
+    .topbar-links a { font-size: 0.78rem; color: var(--gray-1); }
+    .topbar-links a:hover { color: var(--accent); text-decoration: none; }
+    .hero { text-align: center; padding: 4rem 2rem 2.5rem; max-width: 760px; margin: 0 auto; }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1rem; }
+    .hero p { color: var(--gray-1); font-size: 1.02rem; }
+    .section { max-width: 860px; margin: 0 auto; padding: 1.5rem 2rem; }
+    .section h2 { font-size: 1.25rem; letter-spacing: -0.01em; margin-bottom: 0.75rem; }
+    .section > p { color: var(--gray-1); font-size: 0.95rem; margin-bottom: 1rem; }
+    .file-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .file-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem; padding: 0.7rem 0.9rem; background: var(--gray-5); border: 1px solid var(--gray-4); border-radius: var(--radius); font-size: 0.9rem; }
+    .file-list li > a { font-family: var(--font-mono); font-size: 0.82rem; white-space: nowrap; }
+    .file-desc { color: var(--gray-1); flex: 1; min-width: 12rem; }
+    pre { background: var(--gray-5); border: 1px solid var(--gray-4); border-radius: var(--radius); padding: 1rem 1.25rem; font-family: var(--font-mono); font-size: 0.82rem; overflow-x: auto; color: var(--white); }
+    .site-footer { border-top: 1px solid var(--gray-3); margin-top: 3rem; padding: 2rem 1.5rem; text-align: center; color: var(--gray-2); font-size: 0.78rem; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .site-footer a { color: var(--gray-1); }
+    .site-footer a:hover { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="topbar-logo" href="/">objectville<span class="dot">.</span>borck<span class="dot">.</span><span class="tld">education</span></a>
+  <div class="topbar-spacer"></div>
+  <nav class="topbar-links">
+    <a href="https://programming.borck.education">Programming</a>
+    <a href="https://borck.education">Education</a>
+    <a href="https://github.com/michael-borck/objectville">GitHub</a>
+  </nav>
+</div>
+
+<section class="hero">
+  <h1>Object-oriented Python, one subway system at a time.</h1>
+  <p>A small, dependency-free codebase that models a city subway with classes. Read it to see how objects collaborate; run it to watch them; extend it to make the ideas yours.</p>
+</section>
+
+<section class="section">
+  <h2>Run it</h2>
+  <p>Standard library only — nothing to install beyond Python 3.</p>
+  <pre>git clone https://github.com/michael-borck/objectville.git
+cd objectville
+python Subway.py</pre>
+</section>
+
+<section class="section">
+  <h2>The classes</h2>
+  <p>Five small files, each with one job — the object-oriented idea in miniature:</p>
+  <ul class="file-list">
+    <li><a href="https://github.com/michael-borck/objectville/blob/main/Station.py">Station.py</a><span class="file-desc">A stop on the network — the simplest object</span></li>
+    <li><a href="https://github.com/michael-borck/objectville/blob/main/Connection.py">Connection.py</a><span class="file-desc">A link between two stations on a line — objects holding objects</span></li>
+    <li><a href="https://github.com/michael-borck/objectville/blob/main/Subway.py">Subway.py</a><span class="file-desc">The network itself: stations, connections, and the queries that walk them</span></li>
+    <li><a href="https://github.com/michael-borck/objectville/blob/main/SubwayLoader.py">SubwayLoader.py</a><span class="file-desc">Builds a Subway from a plain-text map — separating data from model</span></li>
+    <li><a href="https://github.com/michael-borck/objectville/blob/main/SubwayPrinter.py">SubwayPrinter.py</a><span class="file-desc">Presents the network — separating display from model</span></li>
+  </ul>
+  <p style="margin-top:1rem">The city map lives in <a href="https://github.com/michael-borck/objectville/blob/main/ObjectvilleSubway.txt">ObjectvilleSubway.txt</a> — edit it, add a line, and rerun. Objectville itself is a tip of the hat to the town where the <em>Head First</em> books taught a generation of programmers objects.</p>
+</section>
+
+<section class="section">
+  <h2>Try extending it</h2>
+  <p>Good first exercises: add a <code>get_directions</code> that finds a route between two stations; add fares per connection and price a journey; write a second loader that reads JSON instead of text — and notice how little else has to change.</p>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="https://programming.borck.education">programming.borck.education</a>
+    <a href="https://calculatorwalkthrough.borck.education">The Calculator Walkthrough</a>
+    <a href="https://borck.dev">borck.dev</a>
+  </div>
+  <p>Michael Borck · Perth, WA · <a href="mailto:hello@borck.dev">hello@borck.dev</a></p>
+</footer>
+
+</body>
+</html>
